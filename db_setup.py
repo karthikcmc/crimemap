@@ -8,10 +8,10 @@ connection = pymysql.connect(host='localhost',
 
 try:
 	with connection.cursor() as cursor:
-		sql = "CREATE DATABASE IF NOT EXISTS crimempa"
+		sql = "CREATE DATABASE IF NOT EXISTS crimemap"
 		cursor.execute(sql)
 		sql="""CREATE TABLE IF NOT EXISTS crimemap.crimes (
-			id int NOT NULL AUTO_INCREMENT,,
+			id int NOT NULL AUTO_INCREMENT,
 			latitude FLOAT(10,6),
 			longitude FLOAT(10,6),
 			date DATETIME,
